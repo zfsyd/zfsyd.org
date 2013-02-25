@@ -1,0 +1,78 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('ZFSyd.org | '. $this->translate('Home of the Zend Framework Sydney User Group'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.ico')); ?>
+        
+        <?php 
+        // Using DkcwdZf2Munee view helper to minify and cache css
+        echo $this->muneeCss(array(
+                 $this->basePath() . '/css/bootstrap.css', 
+                 $this->basePath() . '/css/bootstrap-responsive.css',
+                 $this->basePath() . '/css/bootstrap-overrides.css'                            
+                 )
+             );                        
+        ?>                        
+        
+        <?php 
+        // Decided not to use muneeJs() view helper here since the js files specified are already minified, 
+        // also felt the conditional application of the html5.js script is a nice ZF2 feature to show case
+        echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+                                ->prependFile($this->basePath() . '/js/jquery.min.js') 
+        ?>
+
+    </head>
+    <body>
+    
+    <div class="container-fluid">
+    
+    <div class="zfsyd-header">        
+    <a href="/" title="Link to the ZfSyd.org home page" >
+    <?php 
+    // Using DkcwdZf2Munee view helper to resize and cache image
+    echo $this->muneeImg(
+             $this->basePath() . '/images/logo.jpg', // path to image
+             'w[204]h[59]', // dimensions for resize instruction
+             // additional attributes to be added to img tag
+             array(
+                 'class' => 'logo',
+                 'alt'   => 'Zend Framework Sydney User Group Logo',
+                 'title' => 'ZfSyd.org is home of the Zend Framework Sydney User Group',
+             )
+         ); 
+    ?>
+    </a>
+    </div>
+    
+        <!-- content -->
+        <div class="zfsyd-content">        
+        <?php 
+        // $this->content is the content of the relevant view script which this
+        // layout script is wrapping
+        echo $this->content; 
+        ?>        
+        <br style="clear: both" />
+        </div>
+        <!-- /content -->
+        
+        <div class="zfsyd-footer" >
+        <footer>        
+        <p class="copyright" >&copy; <?php echo date('Y') ?> by Zend Framework Sydney User Group <?php echo $this->translate('All rights reserved.') ?></p>
+        </footer>
+        </div>
+        
+        <br style="clear: both" />
+        
+        </div> <!-- /container -->
+                
+        <?php echo $this->inlineScript() ?>
+        
+    </body>
+</html>
