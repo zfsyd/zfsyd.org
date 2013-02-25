@@ -1,0 +1,96 @@
+html {
+	background: #153F4E;
+}
+
+body {
+	background: #153F4E;	
+    padding: 0px 0px 0px 0px;
+}
+
+p.copyright {
+	color: #ffffff;
+	margin-top:25px;
+	margin-left:5px;
+}
+
+img.logo {
+	margin-top:10px;
+	margin-left:5px;
+}
+
+a img:hover {
+	opacity: 0.9;
+}
+
+div.row {
+	margin: 0px !important;
+}
+
+.container-fluid {
+	padding-left: 0px !important; 
+	padding-right: 0px !important; 
+}
+
+div.container-fluid {	
+	margin: 0px !important;
+	background: #153F4E;	
+	background-repeat: repeat;
+}
+
+div.zfsyd-header {
+	min-height: 80px;
+	background-image: url("/images/bg-header.jpg");
+	background-repeat: repeat-x;
+	-webkit-box-shadow:	2px 2px 8px 2px rgba(00, 00, 00, 0.3);
+	-moz-box-shadow: 	2px 2px 8px 2px rgba(00, 00, 00, 0.3);
+	box-shadow: 		2px 2px 8px 2px rgba(00, 00, 00, 0.3);
+}
+
+div.zfsyd-content {
+	min-height: 200px;
+	background-color: #DDF4FB;
+	background-image: url("/images/bg-content.jpg");
+	background-repeat: repeat-x;
+	padding: 10px 20px 10px 20px;
+	-webkit-box-shadow:	2px 2px 8px 2px rgba(00, 00, 00, 0.3);
+	-moz-box-shadow: 	2px 2px 8px 2px rgba(00, 00, 00, 0.3);
+	box-shadow: 		2px 2px 8px 2px rgba(00, 00, 00, 0.3);
+}
+
+div.zfsyd-footer {
+	background-color: #153F4E;	
+	/* background-image: url("/images/bg-footer.jpg"); */
+	background-repeat: repeat-x;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+	background-color: #57a900;
+    background-image: -moz-linear-gradient(top, #70d900, #57a900);
+    background-image: -ms-linear-gradient(top, #70d900, #57a900);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+    background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+    background-image: -o-linear-gradient(top, #70d900, #57a900);
+    background-image: linear-gradient(top, #70d900, #57a900);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+    background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+    background-color: #57a900;
+}
+
+div.container a.brand {    
+    margin-left: 0;
+    padding: 8px 20px 12px 0px;
+}

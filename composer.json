@@ -1,0 +1,20 @@
+{
+    "name": "zfsyd/zfsyd.org",
+    "description": "The Zend Framework Sydney User Group Website",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "zend",
+        "framework",
+        "sydney",
+        "user",
+        "group",
+        "zf2"
+    ],
+    "homepage": "http://www.zfsyd.org/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.1",
+        "dkcwd/dkcwd-zf2-munee": "1.2.*",
+        "phly/phly-simple-page": "dev-master"
+    }
+}
